@@ -1,0 +1,2579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibérico Gastrobar — Salón de Eventos · Caracas</title>
+<meta name="description" content="Un pedazo de España en Caracas. Salón de eventos para celebraciones, graduaciones, quinceañeros, corporativos y cenas privadas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --tinto-deep: #0f1419;
+  --tinto: #6b1d1d;
+  --terracota: #c2542d;
+  --terracota-soft: #d97548;
+  --crema: #f4ead5;
+  --crema-soft: #faf4e3;
+  --oro: #b8893a;
+  --oro-light: #d4a85a;
+  --oliva: #5a5d3a;
+  --ink: #2b1f17;
+  --carbon: #0a0d12;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--crema);
+  color: var(--ink);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+/* ===== LOGO STYLE (matches brand identity) ===== */
+.brand-logo {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.brand-logo .e-bar {
+  position: relative;
+}
+.brand-logo .e-bar::after {
+  content: '';
+  position: absolute;
+  top: -0.18em;
+  left: 15%;
+  width: 70%;
+  height: 0.08em;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.4rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: background 0.4s, padding 0.4s;
+}
+nav.scrolled {
+  background: rgba(15, 20, 25, 0.95);
+  padding: 1rem 3rem;
+  backdrop-filter: blur(8px);
+}
+.nav-logo {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+  color: var(--crema);
+  text-decoration: none;
+}
+.nav-logo .e-bar {
+  position: relative;
+}
+.nav-logo .e-bar::after {
+  content: '';
+  position: absolute;
+  top: -0.15em;
+  left: 15%;
+  width: 70%;
+  height: 0.07em;
+  background: currentColor;
+}
+.nav-logo small {
+  font-size: 0.6em;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  opacity: 0.6;
+  margin-left: 0.5em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--crema);
+  text-decoration: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+  transition: color 0.3s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--oro-light);
+  transition: width 0.3s;
+}
+.nav-links a:hover { color: var(--oro-light); }
+.nav-links a:hover::after { width: 100%; }
+.menu-toggle { display: none; }
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  min-height: 700px;
+  background: var(--tinto-deep);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 75% 40%, rgba(184, 137, 58, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 15% 85%, rgba(194, 84, 45, 0.18) 0%, transparent 50%),
+    linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.5) 100%);
+  pointer-events: none;
+}
+.hero::after {
+  content: 'IBĒRICO';
+  position: absolute;
+  bottom: -8vw;
+  right: -2vw;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 28vw;
+  color: rgba(184, 137, 58, 0.05);
+  letter-spacing: 0.02em;
+  line-height: 0.8;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+.hero-logo-mark {
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.1s forwards;
+}
+.hero-logo-mark .brand-logo {
+  color: var(--crema);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: 0.1em;
+}
+.hero-logo-mark .gastrobar {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 0.65rem;
+  letter-spacing: 0.5em;
+  margin-top: 0.4rem;
+  color: var(--oro-light);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  color: var(--oro-light);
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.3s forwards;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: var(--oro-light);
+}
+.hero h1 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(3rem, 8.5vw, 8.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  color: var(--crema);
+  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+}
+.hero h1 .line {
+  display: block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s forwards;
+}
+.hero h1 .line:nth-child(1) { animation-delay: 0.5s; }
+.hero h1 .line:nth-child(2) { animation-delay: 0.7s; }
+.hero h1 .line:nth-child(3) { animation-delay: 0.9s; }
+.hero h1 em {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--oro-light);
+}
+.hero-sub {
+  max-width: 520px;
+  color: rgba(244, 234, 213, 0.75);
+  font-size: 1.05rem;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeUp 1s 1.1s forwards;
+}
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 1s 1.3s forwards;
+}
+.btn-primary, .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.1rem 2.2rem;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  transition: all 0.4s;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+}
+.btn-primary {
+  background: var(--terracota);
+  color: var(--crema);
+}
+.btn-primary:hover {
+  background: var(--oro);
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--crema);
+  border-color: rgba(244, 234, 213, 0.3);
+}
+.btn-secondary:hover {
+  border-color: var(--oro-light);
+  color: var(--oro-light);
+}
+.arrow-icon { display: inline-block; transition: transform 0.4s; }
+.btn-primary:hover .arrow-icon,
+.btn-secondary:hover .arrow-icon { transform: translateX(4px); }
+
+.scroll-cue {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(244, 234, 213, 0.5);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  opacity: 0;
+  animation: fadeUp 1s 1.6s forwards;
+}
+.scroll-cue::after {
+  content: '';
+  width: 1px;
+  height: 40px;
+  background: rgba(244, 234, 213, 0.3);
+  animation: scrollLine 2s infinite;
+}
+
+/* ===== SECTIONS ===== */
+section { position: relative; z-index: 2; }
+.container { max-width: 1300px; margin: 0 auto; }
+.section-eyebrow {
+  color: var(--terracota);
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+.section-eyebrow::before {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--terracota);
+}
+.section-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+.section-title em {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--terracota);
+}
+
+/* ===== ESSENCE STRIP ===== */
+.essence {
+  background: var(--tinto-deep);
+  color: var(--crema);
+  padding: 4rem 3rem;
+  overflow: hidden;
+}
+.essence-marquee {
+  display: flex;
+  gap: 4rem;
+  animation: marquee 35s linear infinite;
+  white-space: nowrap;
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+}
+.essence-marquee span {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.essence-marquee .dot {
+  width: 12px;
+  height: 12px;
+  background: var(--oro-light);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ===== ESPACIOS ===== */
+.espacios {
+  background: var(--crema-soft);
+  padding: 8rem 3rem;
+}
+.espacios-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 5rem;
+}
+.espacios-header .section-eyebrow { justify-content: center; }
+.espacios-header p {
+  opacity: 0.75;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+.capacity-banner {
+  background: var(--tinto-deep);
+  color: var(--crema);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.capacity-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(184, 137, 58, 0.2) 0%, transparent 70%);
+}
+.capacity-banner > * { position: relative; z-index: 1; }
+.capacity-number {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-weight: 400;
+  color: var(--oro-light);
+  line-height: 1;
+  font-style: italic;
+}
+.capacity-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(244, 234, 213, 0.7);
+  margin-top: 0.5rem;
+}
+
+.spaces-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.space-card {
+  background: var(--crema);
+  border-radius: 8px;
+  padding: 2.5rem;
+  border: 1px solid rgba(43, 31, 23, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.4s;
+}
+.space-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--terracota);
+  box-shadow: 0 20px 40px rgba(15, 20, 25, 0.08);
+}
+.space-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(194, 84, 45, 0.08);
+  border-radius: 50%;
+  color: var(--terracota);
+}
+.space-name {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--tinto-deep);
+  line-height: 1;
+}
+.space-name em {
+  font-style: italic;
+  font-family: 'Fraunces', serif;
+  color: var(--terracota);
+}
+.space-desc {
+  font-size: 0.95rem;
+  color: var(--ink);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+.space-capacities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(43, 31, 23, 0.1);
+}
+.cap-item {
+  text-align: center;
+  padding: 1rem;
+  background: var(--crema-soft);
+  border-radius: 4px;
+}
+.cap-item .num {
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--terracota);
+  line-height: 1;
+  font-weight: 500;
+}
+.cap-item .lbl {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.7;
+  margin-top: 0.3rem;
+}
+.cap-item.wide { grid-column: 1 / -1; }
+.cap-item.wide .num { font-size: 1.4rem; }
+
+/* ===== HISTORIA ===== */
+.historia {
+  background: var(--crema);
+  padding: 8rem 3rem;
+}
+.historia-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 5rem;
+  margin-bottom: 6rem;
+  align-items: end;
+}
+.historia-intro p {
+  font-size: 1.15rem;
+  color: var(--ink);
+  max-width: 520px;
+  line-height: 1.7;
+}
+.historia-intro .lead {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--tinto);
+  line-height: 1.4;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 4rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent 0%, var(--terracota) 10%, var(--terracota) 90%, transparent 100%);
+  transform: translateX(-50%);
+}
+.chapter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-bottom: 6rem;
+  align-items: center;
+  position: relative;
+}
+.chapter:last-child { margin-bottom: 0; }
+.chapter::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  background: var(--terracota);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 6px var(--crema), 0 0 0 7px var(--terracota);
+}
+.chapter-year {
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 5rem;
+  color: var(--terracota);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.chapter-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--tinto-deep);
+}
+.chapter-text {
+  font-size: 1rem;
+  color: var(--ink);
+  opacity: 0.85;
+  line-height: 1.7;
+}
+.chapter:nth-child(even) .chapter-content {
+  grid-column: 2;
+  text-align: left;
+  padding-left: 3rem;
+}
+.chapter:nth-child(even) .chapter-visual {
+  grid-column: 1;
+  grid-row: 1;
+  padding-right: 3rem;
+  text-align: right;
+}
+.chapter:nth-child(odd) .chapter-content {
+  text-align: right;
+  padding-right: 3rem;
+}
+.chapter:nth-child(odd) .chapter-visual { padding-left: 3rem; }
+.chapter:nth-child(odd) .chapter-year { text-align: right; }
+.chapter-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chapter-visual svg {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
+/* ===== FUNDADORES ===== */
+.fundadores {
+  background: var(--tinto-deep);
+  color: var(--crema);
+  padding: 8rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.fundadores::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(184, 137, 58, 0.18) 0%, transparent 70%);
+}
+.fundadores-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.fundadores .section-eyebrow {
+  color: var(--oro-light);
+  justify-content: center;
+}
+.fundadores .section-eyebrow::before { background: var(--oro-light); }
+.fundadores .section-title {
+  color: var(--crema);
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.fundadores .section-title em { color: var(--oro-light); }
+.fundadores-text {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: rgba(244, 234, 213, 0.8);
+  line-height: 1.8;
+}
+.fundadores-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-top: 5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.stat { text-align: center; }
+.stat-number {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--oro-light);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(244, 234, 213, 0.6);
+}
+
+/* ===== EVENTOS ===== */
+.eventos {
+  background: var(--crema-soft);
+  padding: 8rem 3rem;
+}
+.eventos-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.eventos-header .section-eyebrow { justify-content: center; }
+.eventos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.evento-card {
+  background: var(--crema);
+  padding: 2.5rem 2rem;
+  border-radius: 4px;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(43, 31, 23, 0.08);
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+}
+.evento-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--tinto) 0%, var(--tinto-deep) 100%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 0;
+}
+.evento-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--terracota);
+}
+.evento-card:hover::before { opacity: 1; }
+.evento-card:hover .evento-icon,
+.evento-card:hover .evento-title,
+.evento-card:hover .evento-desc,
+.evento-card:hover .evento-features,
+.evento-card:hover .evento-cta { color: var(--crema); }
+.evento-card:hover .evento-icon svg path,
+.evento-card:hover .evento-icon svg circle,
+.evento-card:hover .evento-icon svg line,
+.evento-card:hover .evento-icon svg rect { stroke: var(--oro-light); }
+.evento-card > * { position: relative; z-index: 1; transition: color 0.5s; }
+.evento-icon {
+  margin-bottom: 1.8rem;
+  color: var(--terracota);
+}
+.evento-icon svg {
+  width: 40px;
+  height: 40px;
+}
+.evento-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: var(--tinto-deep);
+}
+.evento-desc {
+  font-size: 0.95rem;
+  color: var(--ink);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex: 1;
+}
+.evento-features {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--ink);
+  opacity: 0.7;
+}
+.evento-features li {
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+.evento-features li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--terracota);
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+  top: 0.3rem;
+}
+.evento-cta {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--terracota);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* ===== COTIZADOR ===== */
+.cotizador {
+  background: linear-gradient(180deg, var(--crema) 0%, var(--crema-soft) 100%);
+  padding: 8rem 3rem;
+  position: relative;
+}
+.cotizador-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 4rem;
+}
+.cotizador-header .section-eyebrow { justify-content: center; }
+.cotizador-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--crema);
+  border-radius: 8px;
+  border: 1px solid rgba(43, 31, 23, 0.1);
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(15, 20, 25, 0.08);
+}
+.cotizador-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+.cotizador-form {
+  padding: 3rem;
+  border-right: 1px solid rgba(43, 31, 23, 0.08);
+}
+.cotizador-summary {
+  background: var(--tinto-deep);
+  color: var(--crema);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+.cotizador-summary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 100% 0%, rgba(184, 137, 58, 0.12) 0%, transparent 60%);
+}
+.cotizador-summary > * { position: relative; z-index: 1; }
+
+.step-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--terracota);
+  margin-bottom: 0.6rem;
+  display: block;
+  font-weight: 600;
+}
+.step-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--tinto-deep);
+  margin-bottom: 1.2rem;
+}
+.form-step { margin-bottom: 2.5rem; }
+.form-step:last-child { margin-bottom: 0; }
+
+.event-types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+.event-types button {
+  padding: 1rem 0.8rem;
+  background: transparent;
+  border: 1px solid rgba(43, 31, 23, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.78rem;
+  color: var(--ink);
+  transition: all 0.3s;
+  text-align: center;
+}
+.event-types button:hover {
+  border-color: var(--terracota);
+  background: rgba(194, 84, 45, 0.04);
+}
+.event-types button.active {
+  background: var(--terracota);
+  border-color: var(--terracota);
+  color: var(--crema);
+}
+
+.guest-counter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--crema-soft);
+  padding: 0.5rem;
+  border-radius: 6px;
+  width: fit-content;
+  border: 1px solid rgba(43, 31, 23, 0.1);
+}
+.guest-counter button {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  background: var(--tinto-deep);
+  color: var(--crema);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.guest-counter button:hover { background: var(--terracota); }
+.guest-counter input {
+  width: 80px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.4rem;
+  color: var(--tinto-deep);
+  font-weight: 600;
+}
+.guest-counter input:focus { outline: none; }
+.guest-hint {
+  font-size: 0.75rem;
+  color: var(--ink);
+  opacity: 0.6;
+  margin-top: 0.6rem;
+}
+.guest-hint.warn { color: var(--terracota); opacity: 0.9; font-weight: 500; }
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+.option-card {
+  padding: 1rem 1.2rem;
+  background: transparent;
+  border: 1px solid rgba(43, 31, 23, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.option-card:hover {
+  border-color: var(--terracota);
+  background: rgba(194, 84, 45, 0.03);
+}
+.option-card.active {
+  border-color: var(--terracota);
+  background: rgba(194, 84, 45, 0.08);
+}
+.option-card.featured {
+  background: linear-gradient(135deg, rgba(184, 137, 58, 0.08) 0%, rgba(194, 84, 45, 0.05) 100%);
+  border-color: var(--oro);
+}
+.option-card.featured.active {
+  background: linear-gradient(135deg, rgba(184, 137, 58, 0.18) 0%, rgba(194, 84, 45, 0.12) 100%);
+  border-color: var(--oro);
+}
+.option-info { flex: 1; }
+.option-name {
+  font-size: 0.9rem;
+  color: var(--tinto-deep);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.option-name .badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  padding: 0.15rem 0.5rem;
+  background: var(--oro);
+  color: var(--crema);
+  border-radius: 100px;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.option-desc {
+  font-size: 0.75rem;
+  color: var(--ink);
+  opacity: 0.7;
+  line-height: 1.4;
+}
+.option-check {
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid rgba(43, 31, 23, 0.2);
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.3s;
+}
+.option-card.active .option-check {
+  background: var(--terracota);
+  border-color: var(--terracota);
+}
+.option-card.active .option-check::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: var(--crema);
+  border-radius: 50%;
+}
+
+/* Consumo libre highlight */
+.consumo-highlight {
+  background: linear-gradient(135deg, rgba(184, 137, 58, 0.1) 0%, rgba(194, 84, 45, 0.08) 100%);
+  border: 1px solid rgba(184, 137, 58, 0.3);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  margin-top: 0.7rem;
+  display: none;
+}
+.consumo-highlight.visible { display: block; }
+.consumo-highlight-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--tinto-deep);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.consumo-highlight-title::before {
+  content: '✨';
+  font-size: 1rem;
+}
+.consumo-highlight p {
+  font-size: 0.8rem;
+  color: var(--ink);
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* Tapas selector */
+.tapas-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.tapa-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background: var(--crema-soft);
+  border-radius: 4px;
+  border: 1px solid rgba(43, 31, 23, 0.06);
+}
+.tapa-info { display: flex; flex-direction: column; gap: 0.2rem; }
+.tapa-name { font-size: 0.88rem; font-weight: 500; color: var(--tinto-deep); }
+.tapa-desc { font-size: 0.7rem; color: var(--ink); opacity: 0.6; }
+.tapa-counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tapa-counter button {
+  width: 26px;
+  height: 26px;
+  border: 1px solid rgba(43, 31, 23, 0.2);
+  background: var(--crema);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  transition: all 0.2s;
+}
+.tapa-counter button:hover {
+  background: var(--terracota);
+  color: var(--crema);
+  border-color: var(--terracota);
+}
+.tapa-counter span {
+  min-width: 36px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--tinto-deep);
+}
+
+.tequeños-row {
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(184, 137, 58, 0.05) 0%, rgba(194, 84, 45, 0.04) 100%);
+  border-radius: 4px;
+  border: 1px solid rgba(184, 137, 58, 0.2);
+}
+.tequeños-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.tequeños-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  user-select: none;
+}
+.toggle-switch {
+  width: 38px;
+  height: 22px;
+  background: rgba(43, 31, 23, 0.15);
+  border-radius: 100px;
+  position: relative;
+  transition: background 0.3s;
+}
+.toggle-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: var(--crema);
+  border-radius: 50%;
+  transition: transform 0.3s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.tequeños-toggle.active .toggle-switch {
+  background: var(--terracota);
+}
+.tequeños-toggle.active .toggle-switch::after {
+  transform: translateX(16px);
+}
+
+.textarea-field {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background: var(--crema-soft);
+  border: 1px solid rgba(43, 31, 23, 0.1);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color 0.3s;
+}
+.textarea-field:focus {
+  outline: none;
+  border-color: var(--terracota);
+}
+
+.contact-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+.input-field {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--crema-soft);
+  border: 1px solid rgba(43, 31, 23, 0.1);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  transition: border-color 0.3s;
+}
+.input-field:focus {
+  outline: none;
+  border-color: var(--terracota);
+}
+.input-field.full { grid-column: 1 / -1; }
+
+/* Summary */
+.summary-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--oro-light);
+  margin-bottom: 1rem;
+}
+.summary-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+.summary-list {
+  list-style: none;
+  margin-bottom: 2rem;
+  border-top: 1px solid rgba(244, 234, 213, 0.15);
+  max-height: 320px;
+  overflow-y: auto;
+}
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(244, 234, 213, 0.1);
+  font-size: 0.85rem;
+  gap: 1rem;
+}
+.summary-row .label {
+  color: rgba(244, 234, 213, 0.7);
+  flex: 1;
+}
+.summary-row .value {
+  color: var(--crema);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.summary-empty {
+  font-style: italic;
+  color: rgba(244, 234, 213, 0.5);
+  font-size: 0.9rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+.summary-total {
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(184, 137, 58, 0.3);
+  border-bottom: 1px solid rgba(184, 137, 58, 0.3);
+  margin-bottom: 1.5rem;
+}
+.summary-total .label {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--oro-light);
+  margin-bottom: 0.5rem;
+}
+.summary-total .range {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--crema);
+  line-height: 1.1;
+}
+.summary-total .currency-note {
+  font-size: 0.7rem;
+  color: rgba(244, 234, 213, 0.5);
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+.summary-disclaimer {
+  font-size: 0.7rem;
+  color: rgba(244, 234, 213, 0.5);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+.summary-consumo-mode {
+  padding: 1.2rem;
+  background: rgba(184, 137, 58, 0.1);
+  border: 1px solid rgba(184, 137, 58, 0.3);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+.summary-consumo-mode .title {
+  font-size: 0.85rem;
+  color: var(--oro-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.summary-consumo-mode p {
+  font-size: 0.75rem;
+  color: rgba(244, 234, 213, 0.7);
+  line-height: 1.5;
+}
+
+.btn-whatsapp {
+  width: 100%;
+  padding: 1.2rem;
+  background: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+.btn-whatsapp:hover {
+  background: #1FB957;
+  transform: translateY(-2px);
+}
+.btn-whatsapp:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== CONTACTO ===== */
+.contacto {
+  background: var(--tinto-deep);
+  color: var(--crema);
+  padding: 7rem 3rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.contacto::after {
+  content: 'IBĒRICO';
+  position: absolute;
+  bottom: -10vw;
+  left: -3vw;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 900;
+  font-size: 30vw;
+  color: rgba(184, 137, 58, 0.04);
+  letter-spacing: 0.02em;
+  line-height: 0.8;
+  pointer-events: none;
+}
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 5rem;
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.contacto h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: var(--crema);
+}
+.contacto h2 em {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--oro-light);
+}
+.contacto-text {
+  color: rgba(244, 234, 213, 0.7);
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+}
+.contacto-info { list-style: none; }
+.contacto-info li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(244, 234, 213, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.contacto-info .label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--oro-light);
+}
+.contacto-info .value {
+  color: var(--crema);
+  font-size: 1.05rem;
+}
+.contacto-info a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.contacto-info a:hover { color: var(--oro-light); }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--carbon);
+  color: rgba(244, 234, 213, 0.6);
+  padding: 2.5rem 3rem;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  position: relative;
+  z-index: 2;
+}
+footer .footer-logo {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  color: var(--crema);
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: inline-block;
+}
+footer .footer-logo small {
+  font-size: 0.55em;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  opacity: 0.5;
+  margin-left: 0.5em;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+@keyframes marquee { to { transform: translateX(-50%); } }
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  nav { padding: 1.2rem 1.5rem; }
+  .nav-links { display: none; }
+  .menu-toggle {
+    display: block;
+    background: transparent;
+    border: 1px solid rgba(244, 234, 213, 0.3);
+    color: var(--crema);
+    padding: 0.6rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .hero, .historia, .fundadores, .eventos, .cotizador, .contacto, .espacios {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .hero { padding-top: 6rem; }
+  .historia-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .spaces-grid { grid-template-columns: 1fr; }
+  .timeline::before { left: 20px; }
+  .chapter {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-left: 50px;
+  }
+  .chapter::before { left: 20px; }
+  .chapter:nth-child(even) .chapter-content,
+  .chapter:nth-child(odd) .chapter-content {
+    grid-column: 1;
+    text-align: left;
+    padding: 0;
+  }
+  .chapter:nth-child(even) .chapter-visual,
+  .chapter:nth-child(odd) .chapter-visual {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0;
+    text-align: left;
+  }
+  .chapter:nth-child(odd) .chapter-year { text-align: left; }
+  .chapter-year { font-size: 3.5rem; }
+  .fundadores-stats { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .eventos-grid { grid-template-columns: 1fr; }
+  .event-types { grid-template-columns: repeat(2, 1fr); }
+  .cotizador-layout { grid-template-columns: 1fr; }
+  .cotizador-form {
+    border-right: none;
+    border-bottom: 1px solid rgba(43, 31, 23, 0.08);
+    padding: 2rem 1.5rem;
+  }
+  .cotizador-summary {
+    padding: 2rem 1.5rem;
+    position: static;
+  }
+  .contacto-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .options-grid { grid-template-columns: 1fr; }
+  .contact-fields { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <a href="#" class="nav-logo">IB<span class="e-bar">Ē</span>RICO<small>gastrobar</small></a>
+  <ul class="nav-links">
+    <li><a href="#espacios">Espacios</a></li>
+    <li><a href="#historia">Historia</a></li>
+    <li><a href="#eventos">Eventos</a></li>
+    <li><a href="#cotizador">Cotizar</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <button class="menu-toggle">Menú</button>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Salón de eventos · Caracas</div>
+    <h1>
+      <span class="line">Un pedazo de</span>
+      <span class="line"><em>España</em> en el</span>
+      <span class="line">corazón de Caracas</span>
+    </h1>
+    <p class="hero-sub">Celebraciones, graduaciones, quinceañeros, cenas privadas y eventos corporativos con la esencia, el sabor y el ambiente de la mejor tradición española.</p>
+    <div class="hero-actions">
+      <a href="#cotizador" class="btn-primary">
+        Cotizar mi evento
+        <span class="arrow-icon">→</span>
+      </a>
+      <a href="#espacios" class="btn-secondary">
+        Ver espacios
+        <span class="arrow-icon">→</span>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-cue">Descubre</div>
+</section>
+
+<!-- ===== ESSENCE MARQUEE ===== -->
+<section class="essence">
+  <div class="essence-marquee">
+    <span>Sabor español <span class="dot"></span> Ambiente único <span class="dot"></span> Eventos memorables <span class="dot"></span> Buena música <span class="dot"></span> Sabor español <span class="dot"></span> Ambiente único <span class="dot"></span> Eventos memorables <span class="dot"></span> Buena música <span class="dot"></span></span>
+    <span>Sabor español <span class="dot"></span> Ambiente único <span class="dot"></span> Eventos memorables <span class="dot"></span> Buena música <span class="dot"></span> Sabor español <span class="dot"></span> Ambiente único <span class="dot"></span> Eventos memorables <span class="dot"></span> Buena música <span class="dot"></span></span>
+  </div>
+</section>
+
+<!-- ===== ESPACIOS ===== -->
+<section class="espacios" id="espacios">
+  <div class="container">
+    <div class="espacios-header reveal">
+      <div class="section-eyebrow" style="justify-content:center;">El local</div>
+      <h2 class="section-title">Dos <em>ambientes</em>, infinitas posibilidades</h2>
+      <p>Adapta el espacio a tu evento. Reserva uno, el otro, o el local completo.</p>
+    </div>
+
+    <div class="capacity-banner reveal">
+      <div class="capacity-number">600</div>
+      <div class="capacity-label">Capacidad máxima · local completo</div>
+    </div>
+
+    <div class="spaces-grid">
+
+      <div class="space-card reveal">
+        <div class="space-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="5" y="9" width="22" height="18" rx="1"/>
+            <path d="M5 9 L16 3 L27 9"/>
+            <rect x="13" y="17" width="6" height="10"/>
+          </svg>
+        </div>
+        <h3 class="space-name">El <em>Salón</em></h3>
+        <p class="space-desc">Zona techada e íntima. Aquí están los baños y la atmósfera más recogida del local. Ideal para cenas, reuniones privadas o como zona VIP de un evento más grande.</p>
+        <div class="space-capacities">
+          <div class="cap-item">
+            <div class="num">25</div>
+            <div class="lbl">Sentados</div>
+          </div>
+          <div class="cap-item">
+            <div class="num">50</div>
+            <div class="lbl">De pie</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-card reveal">
+        <div class="space-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 14 Q4 6 16 6 Q28 6 28 14"/>
+            <line x1="4" y1="14" x2="28" y2="14"/>
+            <line x1="16" y1="14" x2="16" y2="28"/>
+            <line x1="8" y1="28" x2="24" y2="28"/>
+            <circle cx="10" cy="11" r="0.8" fill="currentColor"/>
+            <circle cx="22" cy="11" r="0.8" fill="currentColor"/>
+            <circle cx="16" cy="9" r="0.8" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="space-name">La <em>Terraza</em></h3>
+        <p class="space-desc">Mitad techada, mitad al aire libre. Es el alma del local: el espacio donde la noche se siente. Versátil para cócteles, fiestas o cenas bajo las estrellas.</p>
+        <div class="space-capacities">
+          <div class="cap-item">
+            <div class="num">50</div>
+            <div class="lbl">Sentados</div>
+          </div>
+          <div class="cap-item">
+            <div class="num">150</div>
+            <div class="lbl">Sentados + de pie</div>
+          </div>
+          <div class="cap-item wide">
+            <div class="num">550</div>
+            <div class="lbl">Totalmente de pie · modo fiesta</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== HISTORIA ===== -->
+<section class="historia" id="historia">
+  <div class="container">
+    <div class="historia-intro reveal">
+      <div>
+        <div class="section-eyebrow">Nuestra historia</div>
+        <h2 class="section-title">De importadores<br><em>a anfitriones</em></h2>
+      </div>
+      <div>
+        <p class="lead">"Empezamos vendiendo embutidos. Hoy vendemos momentos."</p>
+        <p style="margin-top:1.5rem; opacity:0.75;">Una historia de cinco amigos, una marca que se reinventa cuatro veces, y la convicción de que España se siente, no solo se come.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="chapter reveal">
+        <div class="chapter-content">
+          <div class="chapter-year">2019</div>
+          <h3 class="chapter-title">Ibéricos CCS</h3>
+          <p class="chapter-text">Nacimos como marca de importación y distribución de embutidos 100% españoles: salchichón, jamón ibérico, queso manchego. En poco tiempo nos convertimos en una de las marcas más grandes de Caracas distribuyendo a restaurantes y bodegones.</p>
+        </div>
+        <div class="chapter-visual">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="85" stroke="#c2542d" stroke-width="1" stroke-dasharray="3 3"/>
+            <path d="M60 100 Q100 60 140 100 Q100 140 60 100Z" stroke="#6b1d1d" stroke-width="1.5" fill="#c2542d" fill-opacity="0.1"/>
+            <path d="M70 90 L130 90 M70 110 L130 110" stroke="#b8893a" stroke-width="1"/>
+            <text x="100" y="105" text-anchor="middle" font-family="Bodoni Moda" font-style="italic" font-size="14" fill="#6b1d1d">jamón ibérico</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="chapter reveal">
+        <div class="chapter-content">
+          <div class="chapter-year">2020</div>
+          <h3 class="chapter-title">La transformación pandémica</h3>
+          <p class="chapter-text">Cuando todo se detuvo, nosotros aceleramos. Fuimos de las primeras marcas en establecer exitosamente la modalidad delivery en Venezuela. Transformamos nuestros productos al mayor en un producto retail: bocatas y tablas vendidas a través de Instagram.</p>
+        </div>
+        <div class="chapter-visual">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="60" width="120" height="80" rx="4" stroke="#6b1d1d" stroke-width="1.5" fill="#c2542d" fill-opacity="0.08"/>
+            <rect x="50" y="75" width="100" height="15" fill="#b8893a" fill-opacity="0.3"/>
+            <rect x="50" y="100" width="60" height="8" fill="#6b1d1d" fill-opacity="0.4"/>
+            <rect x="50" y="115" width="80" height="8" fill="#6b1d1d" fill-opacity="0.4"/>
+            <circle cx="155" cy="55" r="18" fill="#c2542d"/>
+            <text x="155" y="60" text-anchor="middle" font-family="Inter" font-size="10" fill="#f4ead5" font-weight="600">NEW</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="chapter reveal">
+        <div class="chapter-content">
+          <div class="chapter-year">2022</div>
+          <h3 class="chapter-title">El restaurante</h3>
+          <p class="chapter-text">Los clientes estaban cansados del delivery. Querían salir, sentir, vivir. Nos transformamos en un restaurante de comida española clásica con presentación moderna. La tortilla, los montaditos, la paella; todo reinterpretado pero con respeto a la tradición.</p>
+        </div>
+        <div class="chapter-visual">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="70" stroke="#6b1d1d" stroke-width="1.5" fill="#faf4e3"/>
+            <circle cx="100" cy="100" r="55" stroke="#b8893a" stroke-width="0.5" stroke-dasharray="2 4"/>
+            <circle cx="85" cy="90" r="8" fill="#c2542d" fill-opacity="0.7"/>
+            <circle cx="115" cy="92" r="6" fill="#5a5d3a" fill-opacity="0.6"/>
+            <circle cx="100" cy="115" r="9" fill="#b8893a" fill-opacity="0.5"/>
+            <path d="M90 105 L110 105" stroke="#6b1d1d" stroke-width="1"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="chapter reveal">
+        <div class="chapter-content">
+          <div class="chapter-year">Hoy</div>
+          <h3 class="chapter-title">Salón de eventos</h3>
+          <p class="chapter-text">Hoy somos el salón de eventos que trae un pedazo de España a Venezuela: sus vibras, su ambiente, su comida y su buena música. Desde graduaciones de 600 personas hasta cenas familiares de 12, cada evento se convierte en una experiencia.</p>
+        </div>
+        <div class="chapter-visual">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 140 L100 50 L160 140 Z" stroke="#c2542d" stroke-width="1.5" fill="#c2542d" fill-opacity="0.08"/>
+            <circle cx="100" cy="100" r="6" fill="#b8893a"/>
+            <circle cx="75" cy="125" r="4" fill="#6b1d1d"/>
+            <circle cx="125" cy="125" r="4" fill="#6b1d1d"/>
+            <path d="M40 140 L160 140" stroke="#2b1f17" stroke-width="1"/>
+            <path d="M65 155 Q100 165 135 155" stroke="#b8893a" stroke-width="1" stroke-dasharray="2 2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FUNDADORES ===== -->
+<section class="fundadores">
+  <div class="container">
+    <div class="fundadores-content reveal">
+      <div class="section-eyebrow">Los fundadores</div>
+      <h2 class="section-title">Cinco amigos.<br>Una <em>visión</em>.</h2>
+      <p class="fundadores-text">Ibérico Gastrobar fue creado por cinco jóvenes emprendedores de entre 22 y 23 años que decidieron emprender por primera vez en sus vidas en la industria alimenticia. Hoy son grandes empresarios; pero, sobre todo, son los anfitriones detrás de cada evento que celebras con nosotros.</p>
+      <div class="fundadores-stats">
+        <div class="stat">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Fundadores</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Transformaciones</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">+500</div>
+          <div class="stat-label">Eventos realizados</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Esencia española</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVENTOS ===== -->
+<section class="eventos" id="eventos">
+  <div class="container">
+    <div class="eventos-header reveal">
+      <div class="section-eyebrow" style="justify-content:center;">Lo que celebramos</div>
+      <h2 class="section-title">Cada evento, <em>una historia</em></h2>
+      <p style="opacity:0.75; font-size:1.05rem; max-width:600px; margin:0 auto;">Desde íntimas cenas familiares hasta graduaciones masivas, adaptamos el espacio, el menú y el ambiente a la celebración que imaginas.</p>
+    </div>
+
+    <div class="eventos-grid">
+      <div class="evento-card reveal" onclick="selectEventType('graduacion')">
+        <div class="evento-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 6 L36 14 L20 22 L4 14 Z"/>
+            <path d="M10 17 L10 26 Q20 32 30 26 L30 17"/>
+            <line x1="36" y1="14" x2="36" y2="22"/>
+          </svg>
+        </div>
+        <h3 class="evento-title">Graduaciones</h3>
+        <p class="evento-desc">El cierre épico de una etapa. Local privado, barra libre, DJ y toda la logística para hasta 600 graduandos celebrando como se merece.</p>
+        <ul class="evento-features">
+          <li>Hasta 600 personas</li>
+          <li>Local privado completo</li>
+          <li>Producción integral</li>
+        </ul>
+        <span class="evento-cta">Cotizar →</span>
+      </div>
+
+      <div class="evento-card reveal" onclick="selectEventType('quinceañeros')">
+        <div class="evento-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="20" cy="20" r="14"/>
+            <path d="M20 6 L20 34 M6 20 L34 20" stroke-dasharray="2 2"/>
+            <text x="20" y="24" text-anchor="middle" font-size="9" fill="currentColor" stroke="none" font-family="Bodoni Moda" font-style="italic">15</text>
+          </svg>
+        </div>
+        <h3 class="evento-title">Quinceañeros</h3>
+        <p class="evento-desc">Una noche de cuento. Terraza privada, tapas elegantes, decoración a medida y la atención que la celebrada merece.</p>
+        <ul class="evento-features">
+          <li>Desde 50 personas</li>
+          <li>Decoración personalizada</li>
+          <li>Menú adaptado</li>
+        </ul>
+        <span class="evento-cta">Cotizar →</span>
+      </div>
+
+      <div class="evento-card reveal" onclick="selectEventType('cumpleaños')">
+        <div class="evento-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="8" y="18" width="24" height="14" rx="2"/>
+            <line x1="14" y1="18" x2="14" y2="12"/>
+            <line x1="20" y1="18" x2="20" y2="10"/>
+            <line x1="26" y1="18" x2="26" y2="12"/>
+            <path d="M14 8 Q14 10 14 12" stroke-linecap="round"/>
+            <path d="M20 6 Q20 8 20 10" stroke-linecap="round"/>
+            <path d="M26 8 Q26 10 26 12" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="evento-title">Cumpleaños</h3>
+        <p class="evento-desc">Desde íntimas cenas hasta grandes celebraciones. Espacios versátiles, menú a la carta y barra libre opcional.</p>
+        <ul class="evento-features">
+          <li>De 20 a 300 personas</li>
+          <li>Múltiples espacios</li>
+          <li>Tapas + paella + bebidas</li>
+        </ul>
+        <span class="evento-cta">Cotizar →</span>
+      </div>
+
+      <div class="evento-card reveal" onclick="selectEventType('corporativo')">
+        <div class="evento-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="6" y="14" width="28" height="20"/>
+            <path d="M14 14 L14 8 L26 8 L26 14"/>
+            <line x1="6" y1="22" x2="34" y2="22"/>
+            <circle cx="20" cy="22" r="1.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="evento-title">Corporativos</h3>
+        <p class="evento-desc">Cenas de empresa, lanzamientos, networking, fiestas de fin de año. Profesionalismo con la calidez de Ibérico.</p>
+        <ul class="evento-features">
+          <li>Espacio formal o casual</li>
+          <li>Facturación empresarial</li>
+          <li>Audio y proyección</li>
+        </ul>
+        <span class="evento-cta">Cotizar →</span>
+      </div>
+
+      <div class="evento-card reveal" onclick="selectEventType('cena_privada')">
+        <div class="evento-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="20" cy="20" r="10"/>
+            <path d="M12 8 L12 14 M12 14 Q12 16 14 16 L14 22"/>
+            <path d="M28 8 L28 14 Q28 16 26 16 L26 22"/>
+            <line x1="20" y1="30" x2="20" y2="35"/>
+          </svg>
+        </div>
+        <h3 class="evento-title">Cenas Privadas</h3>
+        <p class="evento-desc">Para familia, amigos cercanos o aniversarios. Atención personalizada, espacio reservado y menú a tu medida.</p>
+        <ul class="evento-features">
+          <li>De 8 a 30 personas</li>
+          <li>Mesa privada</li>
+          <li>Menú degustación</li>
+        </ul>
+        <span class="evento-cta">Cotizar →</span>
+      </div>
+
+      <div class="evento-card reveal" onclick="selectEventType('masivo')">
+        <div class="evento-icon">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="13" cy="14" r="4"/>
+            <circle cx="27" cy="14" r="4"/>
+            <circle cx="20" cy="22" r="4"/>
+            <path d="M6 32 Q13 26 20 30 Q27 26 34 32"/>
+          </svg>
+        </div>
+        <h3 class="evento-title">Eventos Masivos</h3>
+        <p class="evento-desc">Fiestas con productora, conciertos íntimos, marcas. Trabajamos modalidad de alquiler o producción conjunta.</p>
+        <ul class="evento-features">
+          <li>+300 personas</li>
+          <li>Sonido profesional</li>
+          <li>Modalidad con productora</li>
+        </ul>
+        <span class="evento-cta">Cotizar →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COTIZADOR ===== -->
+<section class="cotizador" id="cotizador">
+  <div class="container">
+    <div class="cotizador-header reveal">
+      <div class="section-eyebrow">Cotiza sin compromiso</div>
+      <h2 class="section-title">Arma tu <em>evento</em> en minutos</h2>
+      <p style="opacity:0.75; font-size:1.05rem; max-width:620px; margin:0 auto;">Selecciona el tipo de evento, cantidad de invitados y los servicios que necesitas. Te entregamos un estimado al instante y, si quieres, te ponemos en contacto con Vanessa por WhatsApp para cerrar detalles.</p>
+    </div>
+
+    <div class="cotizador-card reveal">
+      <div class="cotizador-layout">
+
+        <!-- FORM SIDE -->
+        <div class="cotizador-form">
+
+          <div class="form-step">
+            <span class="step-label">Paso 1</span>
+            <h3 class="step-title">Tipo de evento</h3>
+            <div class="event-types" id="eventTypes">
+              <button data-type="graduacion">Graduación</button>
+              <button data-type="quinceañeros">15 años</button>
+              <button data-type="cumpleaños">Cumpleaños</button>
+              <button data-type="corporativo">Corporativo</button>
+              <button data-type="cena_privada">Cena privada</button>
+              <button data-type="masivo">Masivo</button>
+            </div>
+          </div>
+
+          <div class="form-step">
+            <span class="step-label">Paso 2</span>
+            <h3 class="step-title">¿Cuántos invitados?</h3>
+            <div class="guest-counter">
+              <button onclick="changeGuests(-10)">−</button>
+              <input type="number" id="guestCount" value="50" min="8" max="600">
+              <button onclick="changeGuests(10)">+</button>
+            </div>
+            <p class="guest-hint" id="guestHint">Capacidad máxima del local: 600 personas</p>
+          </div>
+
+          <div class="form-step">
+            <span class="step-label">Paso 3</span>
+            <h3 class="step-title">Espacio y duración</h3>
+            <div class="options-grid">
+              <div class="option-card" data-option="space" data-value="salon">
+                <div class="option-info">
+                  <div class="option-name">Solo el Salón</div>
+                  <div class="option-desc">Hasta 50 personas (25 sentadas)</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+              <div class="option-card" data-option="space" data-value="terraza">
+                <div class="option-info">
+                  <div class="option-name">Solo la Terraza</div>
+                  <div class="option-desc">Hasta 550 personas (modo fiesta)</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+              <div class="option-card" data-option="space" data-value="local_total">
+                <div class="option-info">
+                  <div class="option-name">Local completo</div>
+                  <div class="option-desc">Hasta 600 personas</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+              <div class="option-card" data-option="duration" data-value="extendida">
+                <div class="option-info">
+                  <div class="option-name">Duración extendida</div>
+                  <div class="option-desc">+6 horas (DJ extra)</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-step">
+            <span class="step-label">Paso 4</span>
+            <h3 class="step-title">Comida (tapas y plato fuerte)</h3>
+            <div class="tapas-selector" id="tapasSelector">
+
+              <div class="tapeños-row tapa-row tequeños-row">
+                <div class="tequeños-info">
+                  <div class="tapa-info">
+                    <div class="tapa-name">Tequeños <span style="color:var(--terracota); font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;">· clásico Ibérico</span></div>
+                    <div class="tapa-desc">Calculamos ~5 tequeños por persona automáticamente</div>
+                  </div>
+                  <div class="tequeños-toggle" id="tequeñosToggle" onclick="toggleTequeños()">
+                    <div class="toggle-switch"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tapa-row" data-tapa="croquetas" data-precio="2.00">
+                <div class="tapa-info">
+                  <div class="tapa-name">Croquetas de jamón</div>
+                  <div class="tapa-desc">Por unidad · sugerido: 3 por persona</div>
+                </div>
+                <div class="tapa-counter">
+                  <button onclick="changeTapa('croquetas', -20)">−</button>
+                  <span id="tapa-croquetas">0</span>
+                  <button onclick="changeTapa('croquetas', 20)">+</button>
+                </div>
+              </div>
+
+              <div class="tapa-row" data-tapa="tortilla" data-precio="1.20">
+                <div class="tapa-info">
+                  <div class="tapa-name">Tortilla española en cubos</div>
+                  <div class="tapa-desc">Por unidad · sugerido: 4 por persona</div>
+                </div>
+                <div class="tapa-counter">
+                  <button onclick="changeTapa('tortilla', -25)">−</button>
+                  <span id="tapa-tortilla">0</span>
+                  <button onclick="changeTapa('tortilla', 25)">+</button>
+                </div>
+              </div>
+
+              <div class="tapa-row" data-tapa="montaditos" data-precio="1.20">
+                <div class="tapa-info">
+                  <div class="tapa-name">Montaditos variados</div>
+                  <div class="tapa-desc">Por unidad · sugerido: 3 por persona</div>
+                </div>
+                <div class="tapa-counter">
+                  <button onclick="changeTapa('montaditos', -20)">−</button>
+                  <span id="tapa-montaditos">0</span>
+                  <button onclick="changeTapa('montaditos', 20)">+</button>
+                </div>
+              </div>
+
+              <div class="tapa-row" data-tapa="paella" data-precio="15.00">
+                <div class="tapa-info">
+                  <div class="tapa-name">Paella</div>
+                  <div class="tapa-desc">Por persona · plato fuerte</div>
+                </div>
+                <div class="tapa-counter">
+                  <button onclick="changeTapa('paella', -10)">−</button>
+                  <span id="tapa-paella">0</span>
+                  <button onclick="changeTapa('paella', 10)">+</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-step">
+            <span class="step-label">Paso 5</span>
+            <h3 class="step-title">Bebidas y barra</h3>
+            <div class="options-grid">
+              <div class="option-card" data-option="bar" data-value="barra_libre">
+                <div class="option-info">
+                  <div class="option-name">Barra libre</div>
+                  <div class="option-desc">Ron + vodka, ilimitado</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+              <div class="option-card" data-option="bar" data-value="servicios">
+                <div class="option-info">
+                  <div class="option-name">Servicios de licor</div>
+                  <div class="option-desc">Whisky, ron, vinos</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+              <div class="option-card" data-option="bar" data-value="espumante">
+                <div class="option-info">
+                  <div class="option-name">Brindis con espumante</div>
+                  <div class="option-desc">1 botella / 5 personas</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+              <div class="option-card featured" data-option="bar" data-value="consumo">
+                <div class="option-info">
+                  <div class="option-name">Consumo libre <span class="badge">Recomendado</span></div>
+                  <div class="option-desc">Cada quien paga lo suyo. Tú solo cubres el local.</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+            </div>
+
+            <div class="consumo-highlight" id="consumoHighlight">
+              <div class="consumo-highlight-title">¿Por qué elegir consumo libre?</div>
+              <p>El plan más económico para el organizador: tú reservas el espacio, garantizas la atmósfera y la música, y cada invitado paga lo que consume. Ideal para eventos grandes donde no quieres asumir el riesgo del consumo total. Solicítale a Vanessa el detalle de cómo se integra con tu evento.</p>
+            </div>
+          </div>
+
+          <div class="form-step">
+            <span class="step-label">Paso 6</span>
+            <h3 class="step-title">Producción y extras</h3>
+            <div class="options-grid">
+              <div class="option-card" data-option="extra" data-value="dj">
+                <div class="option-info">
+                  <div class="option-name">DJ y sonido</div>
+                  <div class="option-desc">Profesional</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+              <div class="option-card" data-option="extra" data-value="laser">
+                <div class="option-info">
+                  <div class="option-name">Láser y humo</div>
+                  <div class="option-desc">Show de luces</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+              <div class="option-card" data-option="extra" data-value="fotografo">
+                <div class="option-info">
+                  <div class="option-name">Fotógrafo</div>
+                  <div class="option-desc">3 horas de cobertura</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+              <div class="option-card" data-option="extra" data-value="decoracion">
+                <div class="option-info">
+                  <div class="option-name">Decoración temática</div>
+                  <div class="option-desc">A coordinar</div>
+                </div>
+                <div class="option-check"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-step">
+            <span class="step-label">Paso 7</span>
+            <h3 class="step-title">Cuéntanos más (opcional)</h3>
+            <textarea class="textarea-field" id="extraNotes" placeholder="Cuéntanos detalles importantes: fecha tentativa, decoración especial, restricciones alimentarias, lo que imaginas..."></textarea>
+          </div>
+
+          <div class="form-step">
+            <span class="step-label">Paso 8</span>
+            <h3 class="step-title">Tus datos</h3>
+            <div class="contact-fields">
+              <input type="text" class="input-field" id="contactName" placeholder="Nombre completo">
+              <input type="tel" class="input-field" id="contactPhone" placeholder="WhatsApp">
+              <input type="email" class="input-field full" id="contactEmail" placeholder="Email (opcional)">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SUMMARY SIDE -->
+        <div class="cotizador-summary">
+          <div class="summary-eyebrow">Tu cotización</div>
+          <h3 class="summary-title">Resumen del evento</h3>
+
+          <div class="summary-consumo-mode" id="consumoMode" style="display:none;">
+            <div class="title">Modalidad: Consumo libre</div>
+            <p>El presupuesto cubre el local, personal y producción. Cada invitado pagará por su consumo en barra.</p>
+          </div>
+
+          <ul class="summary-list" id="summaryList">
+            <li class="summary-empty">Selecciona las opciones de tu evento para ver el estimado</li>
+          </ul>
+
+          <div class="summary-total">
+            <div class="label">Estimado total</div>
+            <div class="range" id="summaryRange">€ —</div>
+            <div class="currency-note">Precios en euros · No incluyen IVA</div>
+          </div>
+
+          <p class="summary-disclaimer">Este es un presupuesto referencial generado automáticamente con nuestros precios base. El presupuesto final puede variar según las particularidades de tu evento; Vanessa lo confirmará por WhatsApp.</p>
+
+          <button class="btn-whatsapp" id="whatsappBtn" disabled onclick="sendWhatsApp()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.86 11.92L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01a7.94 7.94 0 0 0 5.55-13.56zM12.05 18.5a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.6 6.6 0 1 1 5.59 3.09zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.12.13-.23.15-.42.05-.2-.1-.84-.31-1.6-.99-.6-.53-1-1.18-1.12-1.38-.11-.2 0-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.34.06-.13.03-.25-.02-.35-.05-.1-.45-1.08-.61-1.48-.16-.39-.33-.34-.45-.34h-.39c-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.66 0 .98.71 1.92.81 2.05.1.13 1.4 2.13 3.38 2.99.47.2.84.32 1.13.41.48.15.91.13 1.25.08.38-.06 1.17-.48 1.34-.94.17-.46.17-.86.12-.94-.05-.08-.18-.13-.38-.23z"/>
+            </svg>
+            WhatsApp
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section class="contacto" id="contacto">
+  <div class="contacto-grid">
+    <div class="reveal">
+      <h2>Hablemos<br>de tu <em>celebración</em></h2>
+      <p class="contacto-text">Estamos a un mensaje de distancia. Cuéntanos lo que imaginas y armemos juntos una noche que tus invitados recuerden para siempre.</p>
+      <ul class="contacto-info">
+        <li>
+          <span class="label">WhatsApp eventos</span>
+          <a class="value" href="https://wa.me/584125839346" target="_blank">+58 412 583.93.46 — Vanessa</a>
+        </li>
+        <li>
+          <span class="label">Instagram</span>
+          <a class="value" href="https://instagram.com/ibericogastrobar" target="_blank">@ibericogastrobar</a>
+        </li>
+        <li>
+          <span class="label">Email</span>
+          <a class="value" href="mailto:eventos@iberico.com">eventos@iberico.com</a>
+        </li>
+      </ul>
+    </div>
+    <div class="reveal" style="display:flex; align-items:center; justify-content:center;">
+      <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:280px;">
+        <circle cx="150" cy="150" r="130" stroke="#b8893a" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.5"/>
+        <circle cx="150" cy="150" r="100" stroke="#b8893a" stroke-width="0.5" opacity="0.3"/>
+        <text x="150" y="130" text-anchor="middle" font-family="Bodoni Moda" font-size="20" fill="#f4ead5" font-style="italic">desde</text>
+        <text x="150" y="180" text-anchor="middle" font-family="Archivo" font-size="48" fill="#b8893a" font-weight="900">2019</text>
+        <text x="150" y="210" text-anchor="middle" font-family="Inter" font-size="9" fill="#f4ead5" opacity="0.6" letter-spacing="3">CARACAS · VENEZUELA</text>
+        <line x1="80" y1="225" x2="220" y2="225" stroke="#b8893a" stroke-width="0.5" opacity="0.5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">IB<span style="position:relative;">Ē</span>RICO<small>gastrobar</small></div>
+  <div>© 2026 Distribuidora Ibéricos CCS, C.A. · Un pedazo de España en Caracas</div>
+</footer>
+
+<script>
+// ===== STATE =====
+const state = {
+  eventType: null,
+  guests: 50,
+  space: null,
+  duration: null,
+  bar: [],
+  extras: [],
+  tequeños: false,
+  tapas: { croquetas: 0, tortilla: 0, montaditos: 0, paella: 0 }
+};
+
+// ===== PRECIOS BASE =====
+const PRECIOS = {
+  fee: {
+    salon: 500,
+    terraza: 900,
+    local_total: 1800
+  },
+  tequeños_por_persona: 5,
+  tequeño_unidad: 1.60,
+  tapas: {
+    croquetas: 2.00,
+    tortilla: 1.20,
+    montaditos: 1.20,
+    paella: 15.00
+  },
+  personal: {
+    bartender: 40,
+    mesero: 40,
+    seguridad: 50,
+    limpieza: 30,
+    apoyo: 40
+  },
+  barra: {
+    ron: 40,
+    vodka: 35,
+    personas_por_botella: 5,
+    pct_ron: 0.65,
+    pct_vodka: 0.35
+  },
+  extras: {
+    dj: 500,
+    dj_extendido: 600,
+    laser: 150,
+    fotografo: 200,
+    decoracion: 350
+  },
+  servicios_licor_base: 300,
+  servicios_licor_grande: 800,
+  espumante: 25,
+  eur_to_usd: 1.08
+};
+
+// ===== EVENT BINDINGS =====
+document.querySelectorAll('#eventTypes button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#eventTypes button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.eventType = btn.dataset.type;
+    suggestDefaults(state.eventType);
+    updateSummary();
+  });
+});
+
+document.querySelectorAll('.option-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const opt = card.dataset.option;
+    const val = card.dataset.value;
+
+    if (opt === 'space') {
+      document.querySelectorAll('[data-option="space"]').forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+      state.space = val;
+    } else if (opt === 'duration') {
+      card.classList.toggle('active');
+      state.duration = card.classList.contains('active') ? val : null;
+    } else if (opt === 'bar') {
+      // Consumo libre is exclusive
+      if (val === 'consumo') {
+        const wasActive = card.classList.contains('active');
+        document.querySelectorAll('[data-option="bar"]').forEach(c => c.classList.remove('active'));
+        state.bar = [];
+        if (!wasActive) {
+          card.classList.add('active');
+          state.bar = ['consumo'];
+        }
+      } else {
+        // If consumo was active, remove it
+        const consumoCard = document.querySelector('[data-option="bar"][data-value="consumo"]');
+        if (consumoCard.classList.contains('active')) {
+          consumoCard.classList.remove('active');
+          state.bar = state.bar.filter(b => b !== 'consumo');
+        }
+        card.classList.toggle('active');
+        if (card.classList.contains('active')) {
+          if (!state.bar.includes(val)) state.bar.push(val);
+        } else {
+          state.bar = state.bar.filter(b => b !== val);
+        }
+      }
+
+      // Toggle consumo highlight
+      const highlight = document.getElementById('consumoHighlight');
+      if (state.bar.includes('consumo')) {
+        highlight.classList.add('visible');
+      } else {
+        highlight.classList.remove('visible');
+      }
+    } else if (opt === 'extra') {
+      card.classList.toggle('active');
+      if (card.classList.contains('active')) {
+        if (!state.extras.includes(val)) state.extras.push(val);
+      } else {
+        state.extras = state.extras.filter(e => e !== val);
+      }
+    }
+    updateSummary();
+  });
+});
+
+// ===== GUESTS =====
+function changeGuests(delta) {
+  const input = document.getElementById('guestCount');
+  let val = parseInt(input.value) + delta;
+  if (val < 8) val = 8;
+  if (val > 600) val = 600;
+  input.value = val;
+  state.guests = val;
+  validateGuestCapacity();
+  updateSummary();
+}
+document.getElementById('guestCount').addEventListener('input', (e) => {
+  let v = parseInt(e.target.value) || 0;
+  if (v > 600) v = 600;
+  if (v < 0) v = 0;
+  state.guests = v;
+  validateGuestCapacity();
+  updateSummary();
+});
+
+function validateGuestCapacity() {
+  const hint = document.getElementById('guestHint');
+  if (state.guests > 600) {
+    hint.textContent = '⚠️ Excede capacidad máxima (600 personas)';
+    hint.classList.add('warn');
+  } else if (state.space === 'salon' && state.guests > 50) {
+    hint.textContent = '⚠️ El Salón soporta hasta 50 personas. Considera la Terraza o el local completo.';
+    hint.classList.add('warn');
+  } else if (state.space === 'terraza' && state.guests > 550) {
+    hint.textContent = '⚠️ La Terraza soporta hasta 550 personas (modo fiesta).';
+    hint.classList.add('warn');
+  } else {
+    hint.textContent = 'Capacidad máxima del local: 600 personas';
+    hint.classList.remove('warn');
+  }
+}
+
+// ===== TEQUEÑOS TOGGLE =====
+function toggleTequeños() {
+  state.tequeños = !state.tequeños;
+  const toggle = document.getElementById('tequeñosToggle');
+  toggle.classList.toggle('active', state.tequeños);
+  updateSummary();
+}
+
+// ===== TAPAS =====
+function changeTapa(name, delta) {
+  state.tapas[name] = Math.max(0, state.tapas[name] + delta);
+  document.getElementById('tapa-' + name).textContent = state.tapas[name];
+  updateSummary();
+}
+
+// ===== SUGGEST DEFAULTS =====
+function suggestDefaults(type) {
+  const map = {
+    graduacion: { guests: 300, space: 'local_total' },
+    quinceañeros: { guests: 100, space: 'terraza' },
+    cumpleaños: { guests: 50, space: 'terraza' },
+    corporativo: { guests: 60, space: 'salon' },
+    cena_privada: { guests: 20, space: 'salon' },
+    masivo: { guests: 400, space: 'local_total' }
+  };
+  if (map[type]) {
+    document.getElementById('guestCount').value = map[type].guests;
+    state.guests = map[type].guests;
+    document.querySelectorAll('[data-option="space"]').forEach(c => {
+      c.classList.toggle('active', c.dataset.value === map[type].space);
+    });
+    state.space = map[type].space;
+    validateGuestCapacity();
+  }
+}
+
+function selectEventType(type) {
+  const btn = document.querySelector(`#eventTypes button[data-type="${type}"]`);
+  if (btn) btn.click();
+  document.getElementById('cotizador').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ===== CÁLCULO =====
+function calcular() {
+  let costo = 0;
+  const items = [];
+  const consumoLibre = state.bar.includes('consumo');
+
+  // Fee del local
+  if (state.space) {
+    const fee = PRECIOS.fee[state.space];
+    costo += fee;
+    const labels = { salon: 'Fee del Salón', terraza: 'Fee de la Terraza', local_total: 'Fee local completo' };
+    items.push({ label: labels[state.space], value: '$' + fee });
+  }
+
+  // Personal
+  if (state.guests > 0 && state.space) {
+    const escala = state.guests;
+    let bartenders = consumoLibre ? Math.max(2, Math.ceil(escala / 40)) : Math.max(2, Math.ceil(escala / 50));
+    let meseros = Math.max(2, Math.ceil(escala / 60));
+    let seguridad = Math.max(2, Math.ceil(escala / 60));
+    let limpieza = Math.max(2, Math.ceil(escala / 100));
+    let apoyo = Math.max(1, Math.ceil(escala / 150));
+
+    const costoPersonal =
+      bartenders * PRECIOS.personal.bartender +
+      meseros * PRECIOS.personal.mesero +
+      seguridad * PRECIOS.personal.seguridad +
+      limpieza * PRECIOS.personal.limpieza +
+      apoyo * PRECIOS.personal.apoyo;
+    costo += costoPersonal;
+    items.push({ label: `Personal (${bartenders + meseros + seguridad + limpieza + apoyo} pers.)`, value: '$' + costoPersonal });
+  }
+
+  // Tequeños (automático por persona)
+  if (state.tequeños && state.guests > 0) {
+    const total = state.guests * PRECIOS.tequeños_por_persona;
+    const c = total * PRECIOS.tequeño_unidad;
+    costo += c;
+    items.push({ label: `Tequeños (${total} u. · ${PRECIOS.tequeños_por_persona}/pers)`, value: '$' + c.toFixed(0) });
+  }
+
+  // Tapas
+  Object.keys(state.tapas).forEach(t => {
+    if (state.tapas[t] > 0) {
+      const c = state.tapas[t] * PRECIOS.tapas[t];
+      costo += c;
+      const labels = {
+        croquetas: `Croquetas (${state.tapas[t]} u.)`,
+        tortilla: `Tortilla (${state.tapas[t]} u.)`,
+        montaditos: `Montaditos (${state.tapas[t]} u.)`,
+        paella: `Paella (${state.tapas[t]} pers.)`
+      };
+      items.push({ label: labels[t], value: '$' + c.toFixed(0) });
+    }
+  });
+
+  // Barra (skip if consumo libre)
+  if (!consumoLibre) {
+    if (state.bar.includes('barra_libre') && state.guests > 0) {
+      const botellas = Math.ceil(state.guests / PRECIOS.barra.personas_por_botella);
+      const ron = Math.round(botellas * PRECIOS.barra.pct_ron);
+      const vodka = botellas - ron;
+      const costoBarra = ron * PRECIOS.barra.ron + vodka * PRECIOS.barra.vodka;
+      costo += costoBarra;
+      items.push({ label: `Barra libre (${botellas} botellas)`, value: '$' + costoBarra });
+    }
+    if (state.bar.includes('servicios')) {
+      const serv = state.guests >= 100 ? PRECIOS.servicios_licor_grande : PRECIOS.servicios_licor_base;
+      costo += serv;
+      items.push({ label: 'Servicios de licor', value: '$' + serv });
+    }
+    if (state.bar.includes('espumante') && state.guests > 0) {
+      const botellas = Math.ceil(state.guests / 5);
+      const c = botellas * PRECIOS.espumante;
+      costo += c;
+      items.push({ label: `Brindis (${botellas} botellas)`, value: '$' + c });
+    }
+  }
+
+  // Extras
+  if (state.extras.includes('dj')) {
+    const c = state.duration === 'extendida' ? PRECIOS.extras.dj_extendido : PRECIOS.extras.dj;
+    costo += c;
+    items.push({ label: 'DJ y sonido', value: '$' + c });
+  }
+  if (state.extras.includes('laser')) {
+    costo += PRECIOS.extras.laser;
+    items.push({ label: 'Láser y humo', value: '$' + PRECIOS.extras.laser });
+  }
+  if (state.extras.includes('fotografo')) {
+    costo += PRECIOS.extras.fotografo;
+    items.push({ label: 'Fotógrafo (3h)', value: '$' + PRECIOS.extras.fotografo });
+  }
+  if (state.extras.includes('decoracion')) {
+    costo += PRECIOS.extras.decoracion;
+    items.push({ label: 'Decoración temática', value: '$' + PRECIOS.extras.decoracion });
+  }
+
+  return { costo, items, consumoLibre };
+}
+
+function updateSummary() {
+  const { costo, items, consumoLibre } = calcular();
+  const list = document.getElementById('summaryList');
+  const range = document.getElementById('summaryRange');
+  const btn = document.getElementById('whatsappBtn');
+  const consumoMode = document.getElementById('consumoMode');
+
+  consumoMode.style.display = consumoLibre ? 'block' : 'none';
+
+  if (items.length === 0) {
+    list.innerHTML = '<li class="summary-empty">Selecciona las opciones de tu evento para ver el estimado</li>';
+    range.textContent = '€ —';
+    btn.disabled = true;
+    return;
+  }
+
+  list.innerHTML = items.map(i => `
+    <li class="summary-row">
+      <span class="label">${i.label}</span>
+      <span class="value">${i.value}</span>
+    </li>
+  `).join('');
+
+  // USD → EUR + rango
+  const eurBase = costo / PRECIOS.eur_to_usd;
+  const eurMin = Math.round(eurBase * 0.92 / 50) * 50;
+  const eurMax = Math.round(eurBase * 1.10 / 50) * 50;
+  range.textContent = `€${eurMin.toLocaleString('es-ES')} – €${eurMax.toLocaleString('es-ES')}`;
+  btn.disabled = false;
+}
+
+// ===== WHATSAPP =====
+function sendWhatsApp() {
+  const { items, consumoLibre } = calcular();
+  const name = document.getElementById('contactName').value.trim() || 'Cliente';
+  const phone = document.getElementById('contactPhone').value.trim();
+  const email = document.getElementById('contactEmail').value.trim();
+  const notes = document.getElementById('extraNotes').value.trim();
+  const range = document.getElementById('summaryRange').textContent;
+
+  const eventLabels = {
+    graduacion: 'Graduación',
+    quinceañeros: '15 años',
+    cumpleaños: 'Cumpleaños',
+    corporativo: 'Evento corporativo',
+    cena_privada: 'Cena privada',
+    masivo: 'Evento masivo'
+  };
+  const spaceLabels = {
+    salon: 'Solo el Salón',
+    terraza: 'Solo la Terraza',
+    local_total: 'Local completo'
+  };
+
+  let msg = `*Solicitud de cotización · Ibérico Gastrobar*\n\n`;
+  msg += `*Cliente:* ${name}\n`;
+  if (phone) msg += `*WhatsApp:* ${phone}\n`;
+  if (email) msg += `*Email:* ${email}\n\n`;
+  msg += `*Tipo de evento:* ${eventLabels[state.eventType] || '—'}\n`;
+  msg += `*Invitados:* ${state.guests}\n`;
+  if (state.space) msg += `*Espacio:* ${spaceLabels[state.space]}\n`;
+  if (state.duration) msg += `*Duración:* Extendida (+6h)\n`;
+  if (consumoLibre) msg += `*Modalidad de barra:* Consumo libre (cada invitado paga su consumo)\n`;
+  msg += `\n*Detalle del presupuesto:*\n`;
+  items.forEach(i => msg += `· ${i.label}: ${i.value}\n`);
+  msg += `\n*Estimado total:* ${range} (no incluye IVA)\n`;
+  if (notes) msg += `\n*Notas del cliente:*\n${notes}\n`;
+  msg += `\n_Presupuesto generado desde la web. Pendiente confirmar._`;
+
+  const url = `https://wa.me/584125839346?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+}
+
+// ===== NAV SCROLL =====
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('nav');
+  if (window.scrollY > 60) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// ===== REVEAL ===== 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Init
+updateSummary();
+</script>
+
+</body>
+</html>
